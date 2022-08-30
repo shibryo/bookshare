@@ -1,0 +1,28 @@
+{
+    "name": "front",
+    "dockerComposeFile": [
+	"../docker-compose.yaml",
+	"docker-compose.dev.yaml"
+    ],
+    "service": "front",
+    "shutdownAction": "none",
+    "workspaceFolder": "/workspace",
+    "extensions": [
+	"dbaeumer.vscode-eslint",
+	"esbenp.prettier-vscode"
+    ],
+    "settings": {
+	"terminal.integrated.defaultProfile.linux": "bash",
+	"editor.formatOnSave": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[javascript]": {
+	    "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+	    "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+	    "editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+    }
+}

@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+
+  front:
+    tty: yes
+    image: node:18
+    working_dir: "/workspace"
+    volumes:
+      - ./:/workspace:cached
+
+      # Volume Trick: Docker内のnode_modulesをホストマシンに持ち込ませない & node_modulesをキャッシュする
+      - front_node_modules:/workspace/node_modules
+
+volumes:
+  front_node_modules:
